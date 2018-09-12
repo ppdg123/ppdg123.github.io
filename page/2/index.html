@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Deballer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Deballer">
+<meta property="og:url" content="http://md.wangfan.net/page/2/index.html">
+<meta property="og:site_name" content="Deballer">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deballer">
+  
+    <link rel="alternative" href="/atom.xml" title="Deballer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Deballer</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://md.wangfan.net"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2015-11-2-11-39-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/2015-11-2-11-39-2/" class="article-date">
+  <time datetime="2015-11-02T03:39:02.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/2015-11-2-11-39-2/">privoxy的端口问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>privoxy用于socks5代理转换http代理。默认端口是8118。但是http代理没有密码，这个端口很容易被扫到，然后vps的流量就跑完了。所以注意要该端口，不要使用默认端口。<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/11/02/2015-11-2-11-39-2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/11/02/2015-11-2-11-39-2/" data-id="cjlzd87h00005ys76zr3tpupb" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/11/02/2015-11-2-11-39-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/port/">port</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privoxy/">privoxy</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-10-15-15-6-27" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/15/2015-10-15-15-6-27/" class="article-date">
+  <time datetime="2015-10-15T07:06:27.000Z" itemprop="datePublished">2015-10-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/15/2015-10-15-15-6-27/">caffe 使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="数据准备">数据准备</h2><p>数据转成lmdb<br><br>build/tools/convert_imageset rootdir listfile output　<br></p>
+<p><strong>listfile 里label从０开始</strong><br><br>./build/tools/convert_imageset ./ ./data/collar/train.txt ./data/collar/collar_train_lmdb<br><br>./build/tools/convert_imageset ./ ./data/collar/test.txt ./data/collar/collar_test_lmdb<br>计算mean图<br><br>./build/tools/compute_image_mean ./data/collar/collar_train_lmdb ./data/collar/collar_mean.binaryproto</p>
+<h2 id="编写训练solver和模型文件">编写训练solver和模型文件</h2>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/15/2015-10-15-15-6-27/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/10/15/2015-10-15-15-6-27/" data-id="cjlzd87gp0000ys76wloxxu06" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/10/15/2015-10-15-15-6-27/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-10-9-7-59-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/09/2015-10-9-7-59-1/" class="article-date">
+  <time datetime="2015-10-08T23:59:01.000Z" itemprop="datePublished">2015-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/09/2015-10-9-7-59-1/">Rich feature hierarchies for accurate object detection and semantic segmentation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>R-CNNs : combine region proposals with CNNs</p>
+<p><img src="http://wangfan.net:9000/55VJJQD.png" alt="Imgur"></p>
+<p>we focused on two problems: localizing objects with a deep network and training a high-capacity model with only a small quantity of annotated detection data.<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/09/2015-10-9-7-59-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/10/09/2015-10-9-7-59-1/" data-id="cjlzd87gy0003ys76w8jbp9g0" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/10/09/2015-10-9-7-59-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RCNN/">RCNN</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-10-8-22-20-46" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/08/2015-10-8-22-20-46/" class="article-date">
+  <time datetime="2015-10-08T14:20:46.000Z" itemprop="datePublished">2015-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/08/2015-10-8-22-20-46/">Deep Learning - Nature</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>transform the representation at one level (starting with the raw input) into a representation at a higher, slightly more abstract level.</p>
+<ul>
+<li>The first layer of representation typically represent the presence or absence of edges at particular orientations and locations in the image.</li>
+<li>The second layer typically detects motifs by spotting particular arrangements of edges, regardless of small variations in the edge positions.</li>
+<li>The third layer may assemble motifs into larger combinations that correspond to parts of familiar objects, and subsequent layers would detect objects as combinations of these parts.</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/08/2015-10-8-22-20-46/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/10/08/2015-10-8-22-20-46/" data-id="cjlzd87gu0001ys76yuh0saw4" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/10/08/2015-10-8-22-20-46/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deeplearning/">Deeplearning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-9-12-22-27-52" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/12/2015-9-12-22-27-52/" class="article-date">
+  <time datetime="2015-09-12T14:27:52.000Z" itemprop="datePublished">2015-09-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/12/2015-9-12-22-27-52/">matConvNet</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Block</strong> : real 4D array, the first two dimensions index spatial coordinates (image rows and columns respectively), the third dimension feature channels (there can be any number), and the last dimension image instances.<br><img src="http://wangfan.net:9000/whfb7cW.png" alt="Imgur"><br>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/12/2015-9-12-22-27-52/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/09/12/2015-9-12-22-27-52/" data-id="cjlzd87if002hys762y28v950" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/09/12/2015-9-12-22-27-52/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CV/">CV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deeplearning/">deeplearning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-9-8-21-50-24" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/08/2015-9-8-21-50-24/" class="article-date">
+  <time datetime="2015-09-08T13:50:24.000Z" itemprop="datePublished">2015-09-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/08/2015-9-8-21-50-24/">caffe</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.cnblogs.com/tornadomeet/archive/2013/03/22/2975978.html" target="_blank" rel="noopener">softmax</a> 是logistic回归的多值的扩展。</p>
+<ul>
+<li><p><strong>forward and backward</strong><br><img src="http://wangfan.net:9000/DrIjXL7.png" alt="Imgur"></p>
+<p>The Net::Forward() and Net::Backward() methods carry out the respective passes while Layer::Forward() and Layer::Backward() compute each step.<br>The Solver optimizes a model by first calling forward to yield the output and loss, then calling backward to generate the gradient of the model, and then incorporating the gradient into a weight update that attempts to minimize the loss. </p>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/08/2015-9-8-21-50-24/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/09/08/2015-9-8-21-50-24/" data-id="cjlzd87ii002lys76no25nbtf" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/09/08/2015-9-8-21-50-24/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-9-7-16-34-24" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/07/2015-9-7-16-34-24/" class="article-date">
+  <time datetime="2015-09-07T08:34:24.000Z" itemprop="datePublished">2015-09-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/07/2015-9-7-16-34-24/">caffe安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>官方<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="noopener">教程</a></p>
+<p>此处需要注意的:</p>
+<pre><code>* malab支持 MakeFile.<span class="keyword">conf</span> 里设置路径，<span class="keyword">make</span> matcaffe
+</code></pre><p>　</p>
+<pre><code>* make runtest时候出现找不到libcudart.<span class="number">7.0</span>,需要设置环境变量：export <span class="constant">LD_LIBRARY_PATH=</span><span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/usr/local/cuda/lib</span>
+</code></pre>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/07/2015-9-7-16-34-24/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/09/07/2015-9-7-16-34-24/" data-id="cjlzd87ig002jys76xvgobura" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/09/07/2015-9-7-16-34-24/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/caffe/">caffe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deeplearning/">deeplearning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-8-30-19-55-36" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/30/2015-8-30-19-55-36/" class="article-date">
+  <time datetime="2015-08-30T11:55:36.000Z" itemprop="datePublished">2015-08-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/30/2015-8-30-19-55-36/">Object Detection Using Strongly-Supervised Deformable Part Models</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The success of training DPMs, hence, depends on the good initialization of model parts in general.</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/08/30/2015-8-30-19-55-36/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/08/30/2015-8-30-19-55-36/" data-id="cjlzd87id002dys76gzokek7z" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/08/30/2015-8-30-19-55-36/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CV/">CV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paper/">paper</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-8-26-1-1-36" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/26/2015-8-26-1-1-36/" class="article-date">
+  <time datetime="2015-08-25T17:01:36.000Z" itemprop="datePublished">2015-08-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/26/2015-8-26-1-1-36/">Part-based R-CNNs for Fine-grained Category Detection</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Methods for pose-normalized representations have been proposed, but generally presume bounding box annotations at test time due to the difficulty of object detection.</p>
+<p>The recent success of convolutional networks, like [27], on the ImageNet Challenge[23] has inspired further work on applying deep convolutional features to related image classification [14] and detection tasks [21].</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/08/26/2015-8-26-1-1-36/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/08/26/2015-8-26-1-1-36/" data-id="cjlzd87ic002bys76pzqfbf79" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/08/26/2015-8-26-1-1-36/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CV/">CV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RCNN/">RCNN</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paper/">paper</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-8-25-15-57-18" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/25/2015-8-25-15-57-18/" class="article-date">
+  <time datetime="2015-08-25T07:57:18.000Z" itemprop="datePublished">2015-08-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/25/2015-8-25-15-57-18/">Deformable part descriptors for fine-grained recognition and attribute prediction</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Discriminative markings are often highly localized, leading traditional object recognition approaches to struggle with the large pose variation often<br>present in these domains.</p>
+<p>As described in [23], what often differentiates basic-level categories is the presence or absence of parts (e.g. an elephant has 4 legs and a trunk), whereas subordinate<br>categories are more often discriminated by subtle variations in the shape, size and/or appearance properties of these parts (e.g. elephant species can be distinguished by<br>localized cues such as ear shape and size).</p>
+        
+          <p class="article-more-link">
+            <a href="/2015/08/25/2015-8-25-15-57-18/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://md.wangfan.net/2015/08/25/2015-8-25-15-57-18/" data-id="cjlzd87ib002ays76q854r2v5" class="article-share-link">Share</a>
+      
+        <a href="http://md.wangfan.net/2015/08/25/2015-8-25-15-57-18/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CV/">CV</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/paper/">paper</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/">CV</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deeplearning/">Deeplearning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RCNN/">RCNN</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bibex4word/">bibex4word</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bibtext/">bibtext</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/caffe/">caffe</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chacha20/">chacha20</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/">deep learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deeplearning/">deeplearning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deluge/">deluge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dict-ubuntu/">dict ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dropbox/">dropbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fun/">fun</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gpu/">gpu</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/init/">init</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ip/">ip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iptables/">iptables</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/">latex</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lightdm/">lightdm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logisticregression/">logisticregression</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab/">matlab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nmap/">nmap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/">paper</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/port/">port</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privoxy/">privoxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raid/">raid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/traceroute/">traceroute</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tracert/">tracert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis-hexo/">travis hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/win7/">win7</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/渗透测试/">渗透测试</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CV/" style="font-size: 16px;">CV</a> <a href="/tags/Deeplearning/" style="font-size: 10px;">Deeplearning</a> <a href="/tags/RCNN/" style="font-size: 12px;">RCNN</a> <a href="/tags/bibex4word/" style="font-size: 10px;">bibex4word</a> <a href="/tags/bibtext/" style="font-size: 10px;">bibtext</a> <a href="/tags/caffe/" style="font-size: 14px;">caffe</a> <a href="/tags/chacha20/" style="font-size: 10px;">chacha20</a> <a href="/tags/cpp/" style="font-size: 12px;">cpp</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/deeplearning/" style="font-size: 12px;">deeplearning</a> <a href="/tags/deluge/" style="font-size: 10px;">deluge</a> <a href="/tags/dict-ubuntu/" style="font-size: 10px;">dict ubuntu</a> <a href="/tags/dropbox/" style="font-size: 10px;">dropbox</a> <a href="/tags/fun/" style="font-size: 10px;">fun</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/gpu/" style="font-size: 20px;">gpu</a> <a href="/tags/hexo/" style="font-size: 12px;">hexo</a> <a href="/tags/init/" style="font-size: 10px;">init</a> <a href="/tags/ip/" style="font-size: 10px;">ip</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/latex/" style="font-size: 12px;">latex</a> <a href="/tags/lightdm/" style="font-size: 10px;">lightdm</a> <a href="/tags/logisticregression/" style="font-size: 10px;">logisticregression</a> <a href="/tags/matlab/" style="font-size: 10px;">matlab</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nmap/" style="font-size: 10px;">nmap</a> <a href="/tags/paper/" style="font-size: 20px;">paper</a> <a href="/tags/port/" style="font-size: 10px;">port</a> <a href="/tags/privoxy/" style="font-size: 10px;">privoxy</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/traceroute/" style="font-size: 10px;">traceroute</a> <a href="/tags/tracert/" style="font-size: 10px;">tracert</a> <a href="/tags/travis-hexo/" style="font-size: 10px;">travis hexo</a> <a href="/tags/ubuntu/" style="font-size: 18px;">ubuntu</a> <a href="/tags/win7/" style="font-size: 10px;">win7</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/17/2017-2-17-21-16-44/">python笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/06/2017-2-6-10-35-32/">编码规范</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/13/2016-4-13-12-7-24/">C++ Primer</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/02/2016-3-2-11-26-3/">渗透测试</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/09/2016-1-9-12-2-18/">DELL R730 H730P RAID UBUNTU 14.04.3 install</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Wang Fan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'ppdg';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/17856758.js"></script>
+<noscript><a href="http://www.51.la/?17856758" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/17856758.asp" style="border:none" /></a></noscript>
+
+  </div>
+</body>
+</html>
